@@ -1,0 +1,12 @@
+mysql:
+  image: test-eventuate-tram-mysql
+  ports:
+    - 3306:3306
+  environment:
+    - MYSQL_ROOT_PASSWORD=rootpassword
+    - MYSQL_USER=mysqluser
+    - MYSQL_PASSWORD=mysqlpw
+adminer:
+  image: adminer:4.3.1-standalone
+  ports:
+    - 9080:8080

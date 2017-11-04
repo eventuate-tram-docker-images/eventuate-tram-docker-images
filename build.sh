@@ -1,3 +1,9 @@
-#! /bin/bash -e
+#! /bin/bash
 
-docker build -t released-eventuate-tram-cdc-mysql-service .
+set -e
+
+DIRS="eventuate-tram-cdc-mysql-service eventuate-tram-mysql"
+
+for dir in $DIRS ; do
+  (cd $dir ; ./build.sh)
+done
